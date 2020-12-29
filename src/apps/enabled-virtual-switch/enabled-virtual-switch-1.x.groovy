@@ -27,13 +27,17 @@ definition(
 )
 
 preferences {
-    section("") {
-        paragraph title: "Enabled Virtual Switch",
-            "Turn a switch on/off only when enabled"
+    section("<h2>Enabled Virtual Switch</h2>") {
+        paragraph "Turn a switch on/off only when enabled"
     }
 
-    section("Switches") {
-        paragraph: "When the first (control) switch is turned on/off, turn the second (target) switch on/off only if the third (enabled) switch is already on."
+    section("<h2>Switches</h2>") {
+        paragraph "When the first (control) switch is turned on/off, " +
+            "turn the second (target) switch on/off only if the third " +
+            "(enabled) switch is already on. See " +
+            "<a href='https://github.com/drenze/hubitat-misc/blob/master/src/apps/enabled-virtual-switch/README.md' target='_doc'>documentation</a> " +
+            "for additional details."
+
         input "controlSwitch", "capability.switch",
             title: "When this switch is turned on or off",
             multiple: false,
