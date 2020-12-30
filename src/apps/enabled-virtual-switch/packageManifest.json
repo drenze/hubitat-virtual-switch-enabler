@@ -1,0 +1,27 @@
+{
+  "packageName": "Enabled Virtual Switch",
+  "author": "Douglas J. Renze",
+  "version": "1.0.0",
+  "minimumHEVersion": "0.0",
+  "dateReleased": "2020-12-28",
+  "apps": [
+    {
+      "id": "33612af1-bc1c-4c96-8009-482a24d84c96",
+      "name": "Enabled Virtual Switch",
+      "namespace": "net.devizo.evs",
+      "location": "https://raw.githubusercontent.com/drenze/hubitat-misc/master/src/apps/enabled-virtual-switch/enabled-virtual-switch.groovy",
+      "required": true,
+      "oauth": false,
+      "primary": false
+    },
+    {
+      "id": "866ce90d-a5b6-41ba-a0ad-b96340dd0aa6",
+      "name": "Enabled Virtual Switch-1.x",
+      "namespace": "net.devizo.evs",
+      "location": "https://raw.githubusercontent.com/drenze/hubitat-misc/master/src/apps/enabled-virtual-switch/enabled-virtual-switch-1.x.groovy",
+      "required": true,
+      "oauth": false,
+      "primary": false
+    }
+  ]
+}
