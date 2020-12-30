@@ -12,7 +12,7 @@ This is an easy rule to implement via Rule Manager, as seen here:
 
 ![Rule Manager Implementation of EVS](img/evs-rm4.png)
 
-However, it was rewritten in Groovy, following the philosophy of, "If it will be used frequently, turn it into an app."
+However, I rewrote it in Groovy both as an exercise in writing an app for Hubitat and for convenience in creating additional instances.
 
 ## Usage
 
@@ -29,6 +29,6 @@ To create an EVS instance:
      * Select switches, as prompted.
 
 
-## Credit
+## Credits
 
 EVS is my first application written for Hubitat and wouldn't have been written without being able to use the applications in [Robert Morris'](https://github.com/RMoRobert/Hubitat) repository as an example, especially TimedSwitchHelper.
