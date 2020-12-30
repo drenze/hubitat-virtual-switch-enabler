@@ -35,7 +35,7 @@ preferences {
         paragraph "When the first (control) switch is turned on/off, " +
             "turn the second (target) switch on/off only if the third " +
             "(enabled) switch is already on. See " +
-            "<a href='https://github.com/drenze/hubitat-misc/blob/master/src/apps/enabled-virtual-switch/README.md' target='_doc'>documentation</a> " +
+            "<a href='https://github.com/drenze/hubitat-misc/blob/main/src/apps/enabled-virtual-switch/README.md' target='_doc'>documentation</a> " +
             "for additional details."
 
         input "controlSwitch", "capability.switch",
@@ -60,18 +60,20 @@ def logDebug(msg) {
     }
 }
 
+def logWarn(msg) {}
+
 def installed() {
-    log.debug "Installed..."
+    log.info "Installed..."
     initialize()
 }
 
 def updated() {
-    log.debug "Updated..."
+    log.info "Updated..."
     initialize()
 }
 
 def initialize() {
-    log.debug "Initializing: subscribing to events"
+    log.info "Initializing: subscribing to events"
     unsubscribe()
     unschedule()
     subscribe(controlSwitch, "switch", controlSwitchHandler)
