@@ -23,24 +23,46 @@ definition(
     category: "Convenience",
     iconUrl: "",
     iconX2Url: "",
-    iconX3Url: ""
+    iconX3Url: "",
+    installOnOpen: true
 )
 
 preferences {
-    section("") {
-        paragraph title: "Enabled Virtual Switch",
-            "Turn a switch on/off only when enabled"
-    }
+    page(name: "pageMain")
+    page(name: "pageRemove")
+}
 
-    section {
-        app(
-            name: "childApps",
-            appName: "Enabled Virtual Switch-1.x",
-            namespace: "net.devizo.evs",
-            title: "Add new enabled virtual switch.",
-            multiple: true
-        )
+def pageMain() {
+    dynamicPage(name: "pageMain", title: "", install: true, uninstall: false) {
+        section("<h2>Add New Enabled Virtual Switch</h2>") {
+            paragraph "Turn a switch on/off only when enabled"
+            app(
+                name: "childApps",
+                appName: "Enabled Virtual Switch-1.x",
+                namespace: "net.devizo.evs",
+                title: "Add new enabled virtual switch.",
+                multiple: true
+            )
+        }
+
+        section("<h2>Remove Enabled Virtual Switch</h2>") {
+            href "pageRemove",
+                title: "Remove Enabled Virtual Switch",
+                description: "Remove Enabled Virtual Switch app and all " +
+                    "switches."
+        }
     }
+}
+
+def pageRemove() {
+	dynamicPage(name: "pageRemove", title: "", install: false, uninstall: true) {
+		section("<h2>Warning</h2>") {			
+			paragraph "You are about to remove Enabled Virtual Switch and " +
+                "<span style='font-weight:bold'>all</span> Enabled Virtual " +
+                "Switches you've created. You will need to remove any " +
+                "virtual switch devices manually.", required: true, state: null
+		}
+	}
 }
 
 def initialize() {
