@@ -34,8 +34,12 @@ preferences {
 
 def pageMain() {
     dynamicPage(name: "pageMain", title: "", install: true, uninstall: false) {
+        section("<h1>Enabled Virtual Switch</h1>") {
+            paragraph "Turn a switch on/off only when enabled. " +
+                "Primarily used for enabling/disabling groups and scenes."
+        }
+
         section("<h2>Add New Enabled Virtual Switch</h2>") {
-            paragraph "Turn a switch on/off only when enabled"
             app(
                 name: "childApps",
                 appName: "Enabled Virtual Switch-1.x",

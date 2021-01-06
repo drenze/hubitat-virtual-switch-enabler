@@ -37,7 +37,13 @@ preferences {
             "(enabled) switch is already on. See " +
             "<a href='https://github.com/drenze/hubitat-misc/blob/main/src/apps/enabled-virtual-switch/README.md' target='_doc'>documentation</a> " +
             "for additional details."
+    }
 
+    section("<h3>Note</h3>") {
+        paragraph "All devices must be created before creating Enabled Virtual Switch."
+    }
+
+    section("") {
         input "controlSwitch", "capability.switch",
             title: "When this switch is turned on or off",
             multiple: false,
