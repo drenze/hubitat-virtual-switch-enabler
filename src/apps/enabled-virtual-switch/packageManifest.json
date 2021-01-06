@@ -1,9 +1,12 @@
 {
   "packageName": "Enabled Virtual Switch",
   "author": "Doug Renze",
-  "version": "1.0.3",
+  "version": "1.0.4",
+  "releaseNotes": "Add links to documentation and license files.",
   "minimumHEVersion": "0.0",
   "dateReleased": "2021-01-05",
+  "documentationLink": "https://github.com/drenze/hubitat-misc/blob/main/src/apps/enabled-virtual-switch/README.md",
+  "licenseFile": "https://raw.githubusercontent.com/drenze/hubitat-misc/main/LICENSE",
   "apps": [
     {
       "id": "33612af1-bc1c-4c96-8009-482a24d84c96",

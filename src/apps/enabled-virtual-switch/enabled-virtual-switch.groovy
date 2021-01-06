@@ -20,6 +20,7 @@ definition(
     author: "Douglas J. Renze",
     singleInstance: true,
     description: "Turn a switch on/off only when enabled",
+    documentationLink: "https://github.com/drenze/hubitat-misc/blob/main/src/apps/enabled-virtual-switch/README.md",
     category: "Convenience",
     iconUrl: "",
     iconX2Url: "",
