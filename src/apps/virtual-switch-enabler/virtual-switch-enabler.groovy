@@ -16,7 +16,7 @@
 
 definition(
     name: "Enabled Virtual Switch",
-    namespace: "net.devizo.evs",
+    namespace: "net.devizo.vse",
     author: "Douglas J. Renze",
     singleInstance: true,
     description: "Turn a switch on/off only when enabled",
@@ -44,7 +44,7 @@ def pageMain() {
             app(
                 name: "childApps",
                 appName: "Enabled Virtual Switch-1.x",
-                namespace: "net.devizo.evs",
+                namespace: "net.devizo.vse",
                 title: "Add new enabled virtual switch.",
                 multiple: true
             )
@@ -60,14 +60,14 @@ def pageMain() {
 }
 
 def pageRemove() {
-	dynamicPage(name: "pageRemove", title: "", install: false, uninstall: true) {
-		section("<h2>Warning</h2>") {			
-			paragraph "You are about to remove Enabled Virtual Switch and " +
+    dynamicPage(name: "pageRemove", title: "", install: false, uninstall: true) {
+        section("<h2>Warning</h2>") {            
+            paragraph "You are about to remove Enabled Virtual Switch and " +
                 "<span style='font-weight:bold'>all</span> Enabled Virtual " +
                 "Switches you've created. You will need to remove any " +
                 "virtual switch devices manually.", required: true, state: null
-		}
-	}
+        }
+    }
 }
 
 def initialize() {

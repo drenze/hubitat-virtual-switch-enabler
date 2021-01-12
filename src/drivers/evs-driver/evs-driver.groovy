@@ -18,9 +18,9 @@ metadata {
     // TODO: importUrl required?
     definition(
         name: "Enabled Virtual Switch",
-        namespace: "net.devizo.evsd",
+        namespace: "net.devizo.vsed",
         author: "Douglas J. Renze",
-        parent: "net.devizo.evsd",
+        parent: "net.devizo.vsed",
         description: "Do not install directly; use Enabled Virtual Switch app instead.",
         category: "convenience"
     ) {

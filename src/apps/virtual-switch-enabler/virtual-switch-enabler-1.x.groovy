@@ -16,9 +16,9 @@
 
 definition(
     name: "Enabled Virtual Switch-1.x",
-    namespace: "net.devizo.evs",
+    namespace: "net.devizo.vse",
     author: "Douglas J. Renze",
-    parent: "net.devizo.evs:Enabled Virtual Switch",
+    parent: "net.devizo.vse:Enabled Virtual Switch",
     description: "Do not install directly; use Enabled Virtual Switch app instead.",
     category: "convenience",
     iconUrl: "",
