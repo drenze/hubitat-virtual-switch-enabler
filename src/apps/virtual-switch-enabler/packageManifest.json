@@ -1,18 +1,18 @@
 {
-  "packageName": "Enabled Virtual Switch",
+  "packageName": "Virtual Switch Enabler",
   "author": "Doug Renze",
-  "version": "1.0.6",
-  "releaseNotes": "Add links to documentation and license files.",
+  "version": "1.0.7",
+  "releaseNotes": "Update application name",
   "minimumHEVersion": "0.0",
-  "dateReleased": "2021-01-05",
-  "documentationLink": "https://github.com/drenze/hubitat-misc/blob/main/src/apps/enabled-virtual-switch/README.md",
+  "dateReleased": "2021-01-12",
+  "documentationLink": "https://github.com/drenze/hubitat-misc/blob/main/src/apps/virtual-switch-enabler/README.md",
   "licenseFile": "https://raw.githubusercontent.com/drenze/hubitat-misc/main/LICENSE",
   "apps": [
     {
       "id": "33612af1-bc1c-4c96-8009-482a24d84c96",
       "name": "Enabled Virtual Switch",
       "namespace": "net.devizo.evs",
-      "location": "https://raw.githubusercontent.com/drenze/hubitat-misc/main/src/apps/enabled-virtual-switch/enabled-virtual-switch.groovy",
+      "location": "https://raw.githubusercontent.com/drenze/hubitat-misc/main/src/apps/virtual-switch-enabler/virtual-switch-enabler.groovy",
       "required": true,
       "oauth": false,
       "primary": false
@@ -21,7 +21,7 @@
       "id": "866ce90d-a5b6-41ba-a0ad-b96340dd0aa6",
       "name": "Enabled Virtual Switch-1.x",
       "namespace": "net.devizo.evs",
-      "location": "https://raw.githubusercontent.com/drenze/hubitat-misc/main/src/apps/enabled-virtual-switch/enabled-virtual-switch-1.x.groovy",
+      "location": "https://raw.githubusercontent.com/drenze/hubitat-misc/main/src/apps/virtual-switch-enabler/virtual-switch-enabler-1.x.groovy",
       "required": true,
       "oauth": false,
       "primary": false
