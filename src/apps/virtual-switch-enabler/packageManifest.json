@@ -1,8 +1,8 @@
 {
   "packageName": "Virtual Switch Enabler",
   "author": "Doug Renze",
-  "version": "1.1.0",
-  "releaseNotes": "Update application namespace.",
+  "version": "1.1.1",
+  "releaseNotes": "Update documentation link.",
   "minimumHEVersion": "0.0",
   "dateReleased": "2021-01-12",
   "documentationLink": "https://github.com/drenze/hubitat-misc/blob/main/src/apps/virtual-switch-enabler/README.md",

@@ -15,11 +15,11 @@
  */
 
 definition(
-    name: "Enabled Virtual Switch-1.x",
+    name: "Virtual Switch Enabler-1.x",
     namespace: "net.devizo.vse",
     author: "Douglas J. Renze",
-    parent: "net.devizo.vse:Enabled Virtual Switch",
-    description: "Do not install directly; use Enabled Virtual Switch app instead.",
+    parent: "net.devizo.vse:Virtual Switch Enabler",
+    description: "Do not install directly; use Virtual Switch Enabler app instead.",
     category: "convenience",
     iconUrl: "",
     iconX2Url: "",
@@ -27,7 +27,7 @@ definition(
 )
 
 preferences {
-    section("<h2>Enabled Virtual Switch</h2>") {
+    section("<h2>Virtual Switch Enabler</h2>") {
         paragraph "Turn a switch on/off only when enabled"
     }
 
@@ -40,7 +40,7 @@ preferences {
     }
 
     section("<h3>Note</h3>") {
-        paragraph "All devices must be created before creating Enabled Virtual Switch."
+        paragraph "All devices must be created before creating Virtual Switch Enabler."
     }
 
     section("") {

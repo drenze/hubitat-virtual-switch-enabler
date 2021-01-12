@@ -15,12 +15,12 @@
  */
 
 definition(
-    name: "Enabled Virtual Switch",
+    name: "Virtual Switch Enabler",
     namespace: "net.devizo.vse",
     author: "Douglas J. Renze",
     singleInstance: true,
     description: "Turn a switch on/off only when enabled",
-    documentationLink: "https://github.com/drenze/hubitat-misc/blob/main/src/apps/enabled-virtual-switch/README.md",
+    documentationLink: "https://github.com/drenze/hubitat-misc/blob/main/src/apps/virtual-switch-enabler/README.md",
     category: "Convenience",
     iconUrl: "",
     iconX2Url: "",
@@ -35,25 +35,25 @@ preferences {
 
 def pageMain() {
     dynamicPage(name: "pageMain", title: "", install: true, uninstall: false) {
-        section("<h1>Enabled Virtual Switch</h1>") {
+        section("<h1>Virtual Switch Enabler</h1>") {
             paragraph "Turn a switch on/off only when enabled. " +
                 "Primarily used for enabling/disabling groups and scenes."
         }
 
-        section("<h2>Add New Enabled Virtual Switch</h2>") {
+        section("<h2>Add New Virtual Switch Enabler</h2>") {
             app(
                 name: "childApps",
-                appName: "Enabled Virtual Switch-1.x",
+                appName: "Virtual Switch Enabler-1.x",
                 namespace: "net.devizo.vse",
-                title: "Add new enabled virtual switch.",
+                title: "Add new Virtual Switch Enabler.",
                 multiple: true
             )
         }
 
-        section("<h2>Remove Enabled Virtual Switch</h2>") {
+        section("<h2>Remove Virtual Switch Enabler</h2>") {
             href "pageRemove",
-                title: "Remove Enabled Virtual Switch",
-                description: "Remove Enabled Virtual Switch app and all " +
+                title: "Remove Virtual Switch Enabler",
+                description: "Remove Virtual Switch Enabler app and all " +
                     "switches."
         }
     }
@@ -62,7 +62,7 @@ def pageMain() {
 def pageRemove() {
     dynamicPage(name: "pageRemove", title: "", install: false, uninstall: true) {
         section("<h2>Warning</h2>") {            
-            paragraph "You are about to remove Enabled Virtual Switch and " +
+            paragraph "You are about to remove Virtual Switch Enabler and " +
                 "<span style='font-weight:bold'>all</span> Enabled Virtual " +
                 "Switches you've created. You will need to remove any " +
                 "virtual switch devices manually.", required: true, state: null
@@ -71,9 +71,9 @@ def pageRemove() {
 }
 
 def initialize() {
-    log.debug "Initializing: there are ${childApps?.size()} enabled virtual switches installed."
+    log.debug "Initializing: there are ${childApps?.size()} Virtual Switch Enableres installed."
     childApps?.each {
-        child->log.debug "  enabled virtual switch: ${child.label}"
+        child->log.debug "  Virtual Switch Enabler: ${child.label}"
     }
 }
 
