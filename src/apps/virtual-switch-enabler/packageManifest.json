@@ -9,8 +9,8 @@
   "licenseFile": "https://raw.githubusercontent.com/drenze/hubitat-misc/main/LICENSE",
   "apps": [
     {
-      "id": "33612af1-bc1c-4c96-8009-482a24d84c96",
-      "name": "Enabled Virtual Switch",
+      "id": "ac2fa374-94f6-445a-bf18-6658cab04ed0",
+      "name": "Virtual Switch Enabler",
       "namespace": "net.devizo.evs",
       "location": "https://raw.githubusercontent.com/drenze/hubitat-misc/main/src/apps/virtual-switch-enabler/virtual-switch-enabler.groovy",
       "required": true,
@@ -18,8 +18,8 @@
       "primary": false
     },
     {
-      "id": "866ce90d-a5b6-41ba-a0ad-b96340dd0aa6",
-      "name": "Enabled Virtual Switch-1.x",
+      "id": "25adc0d1-e200-41ce-b316-c8d5be3bbe83",
+      "name": "Virtual Switch Enabler-1.x",
       "namespace": "net.devizo.evs",
       "location": "https://raw.githubusercontent.com/drenze/hubitat-misc/main/src/apps/virtual-switch-enabler/virtual-switch-enabler-1.x.groovy",
       "required": true,
