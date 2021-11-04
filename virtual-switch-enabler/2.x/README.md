@@ -30,6 +30,7 @@ To create an VSE instance:
 
 ## Changelog
 
+* v2.0.3 (2021-11-03) - Fix broken package manifest links.
 * v2.0.2 (2021-11-03) - Update documentation.
 * v2.0.0 (2021-11-03) - Add multi-switch control capability. Breaking change, remove v1.x before installing.
 ## Credits

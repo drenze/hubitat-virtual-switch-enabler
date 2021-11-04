@@ -1,18 +1,18 @@
 {
   "packageName": "Virtual Switch Enabler",
   "author": "Doug Renze",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "releaseNotes": "BREAKING CHANGE: Upgrade to 2.x. Add multi-switch selection capability for target switches. Remove v1.x before installing.",
   "minimumHEVersion": "0.0",
   "dateReleased": "2021-11-03",
-  "documentationLink": "https://github.com/drenze/hubitat-misc/blob/main/src/apps/virtual-switch-enabler/README.md",
-  "licenseFile": "https://raw.githubusercontent.com/drenze/hubitat-misc/main/LICENSE",
+  "documentationLink": "https://github.com/drenze/hubitat-virtual-switch-enabler/tree/main/virtual-switch-enabler/2.x",
+  "licenseFile": "https://github.com/drenze/hubitat-virtual-switch-enabler/blob/main/LICENSE",
   "apps": [
     {
       "id": "6cc06f9a-6835-4bba-bce6-e070f5d6cfbe",
       "name": "Virtual Switch Enabler",
       "namespace": "net.devizo.vse-2.x",
-      "location": "https://raw.githubusercontent.com/drenze/hubitat-misc/main/src/apps/virtual-switch-enabler/virtual-switch-enabler.groovy",
+      "location": "https://raw.githubusercontent.com/drenze/hubitat-virtual-switch-enabler/main/virtual-switch-enabler/2.x/vse_parent_2.x.groovy",
       "required": true,
       "oauth": false,
       "primary": false
@@ -21,7 +21,7 @@
       "id": "0cb80f03-d6f9-410c-a37c-07833ad8a6b5",
       "name": "Virtual Switch Enabler-2.x",
       "namespace": "net.devizo.vse-2.x",
-      "location": "https://raw.githubusercontent.com/drenze/hubitat-misc/main/src/apps/virtual-switch-enabler/virtual-switch-enabler-1.x.groovy",
+      "location": "https://raw.githubusercontent.com/drenze/hubitat-virtual-switch-enabler/main/virtual-switch-enabler/2.x/vse_child_2.x.groovy",
       "required": true,
       "oauth": false,
       "primary": false
