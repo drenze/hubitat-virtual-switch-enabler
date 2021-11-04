@@ -18,7 +18,7 @@ definition(
     name: "Virtual Switch Enabler-1.x",
     namespace: "net.devizo.vse",
     author: "Douglas J. Renze",
-    parent: "net.devizo.vse:Virtual Switch Enabler",
+    parent: "net.devizo.vse:Virtual Switch Enabler (Deprecated)",
     description: "Do not install directly; use Virtual Switch Enabler app instead.",
     category: "convenience",
     iconUrl: "",

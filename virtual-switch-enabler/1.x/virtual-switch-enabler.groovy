@@ -15,7 +15,7 @@
  */
 
 definition(
-    name: "Virtual Switch Enabler",
+    name: "Virtual Switch Enabler (Deprecated)",
     namespace: "net.devizo.vse",
     author: "Douglas J. Renze",
     singleInstance: true,
@@ -61,7 +61,7 @@ def pageMain() {
 
 def pageRemove() {
     dynamicPage(name: "pageRemove", title: "", install: false, uninstall: true) {
-        section("<h2>Warning</h2>") {            
+        section("<h2>Warning</h2>") {
             paragraph "You are about to remove Virtual Switch Enabler and " +
                 "<span style='font-weight:bold'>all</span> Enabled Virtual " +
                 "Switches you've created. You will need to remove any " +
@@ -87,4 +87,3 @@ def updated() {
     unsubscribe()
     initialize()
 }
-
