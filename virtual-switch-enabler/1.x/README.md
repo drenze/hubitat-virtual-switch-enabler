@@ -1,8 +1,6 @@
-# Virtual Switch Enabler
+# Virtual Switch Enabler 1.2.0
 
-## Summary
-
-Turn a switch on/off only when enabled.
+Turn a switch on/off only when enabled. Virtual Switch Enabler 1.x is deprecated. Use [Virtual Switch Enabler 2.x][2.x] instead.
 
 ## Description
 
@@ -32,3 +30,5 @@ To create an VSE instance:
 ## Credits
 
 VSE is my first application written for Hubitat and wouldn't have been written without being able to use the applications in [Robert Morris'](https://github.com/RMoRobert/Hubitat) repository as an example, especially TimedSwitchHelper.
+
+[2.x]: ../2.x/

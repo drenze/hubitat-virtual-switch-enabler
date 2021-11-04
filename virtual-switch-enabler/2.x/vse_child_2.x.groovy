@@ -1,5 +1,5 @@
 /**********************************************************************
- * Copyright 2020 Douglas J. Renze
+ * Copyright 2021 Douglas J. Renze
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,10 +15,10 @@
  */
 
 definition(
-    name: "Virtual Switch Enabler-1.x",
-    namespace: "net.devizo.vse",
+    name: "Virtual Switch Enabler-2.x",
+    namespace: "net.devizo.vse-2.x",
     author: "Douglas J. Renze",
-    parent: "net.devizo.vse:Virtual Switch Enabler",
+    parent: "net.devizo.vse-2.x:Virtual Switch Enabler",
     description: "Do not install directly; use Virtual Switch Enabler app instead.",
     category: "convenience",
     iconUrl: "",
@@ -33,9 +33,9 @@ preferences {
 
     section("<h2>Switches</h2>") {
         paragraph "When the first (control) switch is turned on/off, " +
-            "turn the second (target) switch on/off only if the third " +
+            "turn the target switches on/off only if the third " +
             "(enabled) switch is already on. See " +
-            "<a href='https://github.com/drenze/hubitat-misc/blob/main/src/apps/enabled-virtual-switch/README.md' target='_doc'>documentation</a> " +
+            "<a href='https://github.com/drenze/hubitat-misc/blob/main/src/apps/enabled-virtual-switch/2.x/README.md' target='_doc'>documentation</a> " +
             "for additional details."
     }
 
@@ -48,9 +48,9 @@ preferences {
             title: "When this switch is turned on or off",
             multiple: false,
             required: true
-        input "targetSwitch", "capability.switch",
-            title: "Then turn this switch on or off",
-            multiple: false,
+        input "targetSwitches", "capability.switch",
+            title: "Then turn these switches on or off",
+            multiple: true,
             required: true
         input "enabledSwitch", "capability.switch",
             title: "Only if this switch is already on",
@@ -92,20 +92,27 @@ def initialize() {
  */
 def controlSwitchHandler(evt) {
     logDebug "${enabledSwitch.getName()} is ${enabledSwitch.currentValue('switch')}"
-   if (enabledSwitch.currentValue("switch") == "on") {
-        if(evt.value == "on") {
-            logDebug "turning on ${targetSwitch.getName()}"
-            targetSwitch.on()
+    if(evt.value == "on") {
+        // Only turn `targetSwitches` on if `enabledSwitch` is on.
+        if (enabledSwitch.currentValue("switch") == "on") {
+            targetSwitches.each {
+                logDebug "turning on ${it.getName()}"
+                it.on()
+            }
         }
 
-        else if (evt.value == "off") {
-            logDebug "turning off ${targetSwitch.getName()}"
-            targetSwitch.off()
+        // Otherwise turn `controlSwitch` back off.
+        else if (enabledSwitch.currentValue("switch") == "off") {
+            logDebug "turning off ${controlSwitch.getName()}"
+            controlSwitch.off()
         }
-   }
+    }
 
-    else if (enabledSwitch.currentValue("switch") == "off") {
-        logDebug "turning off ${controlSwitch.getName()}"
-        controlSwitch.off()
+    // Always turn `targetSwitches` off, even if `enabledSwitch` is also off.
+    else if (evt.value == "off") {
+        targetSwitches.each {
+            logDebug "turning off ${it.getName()}"
+            it.off()
+        }
     }
 }

@@ -14,33 +14,40 @@
  * limitations under the License.
  */
 
-metadata {
-    // TODO: importUrl required?
-    definition(
-        name: "Enabled Virtual Switch",
-        namespace: "net.devizo.vsed",
-        author: "Douglas J. Renze",
-        parent: "net.devizo.vsed",
-        description: "Do not install directly; use Enabled Virtual Switch app instead.",
-        category: "convenience"
-    ) {
-        capability "Switch"
-        capability "Refresh"
-        capability "Actuator"
-    }
-}
+definition(
+    name: "Virtual Switch Enabler-1.x",
+    namespace: "net.devizo.vse",
+    author: "Douglas J. Renze",
+    parent: "net.devizo.vse:Virtual Switch Enabler (Deprecated)",
+    description: "Do not install directly; use Virtual Switch Enabler app instead.",
+    category: "convenience",
+    iconUrl: "",
+    iconX2Url: "",
+    iconX3Url: ""
+)
 
 preferences {
-    section("<h2>Enabled Virtual Switch</h2>") {
+    section("<h2>Virtual Switch Enabler</h2>") {
         paragraph "Turn a switch on/off only when enabled"
     }
 
     section("<h2>Switches</h2>") {
-        paragraph "Turn the target switch on/off only if the enabled " +
-            "switch is already on. See " +
-            "<a href='https://github.com/drenze/hubitat-misc/blob/main/src/drivers/enabled-virtual-switch/README.md' target='_doc'>documentation</a> " +
+        paragraph "When the first (control) switch is turned on/off, " +
+            "turn the second (target) switch on/off only if the third " +
+            "(enabled) switch is already on. See " +
+            "<a href='https://github.com/drenze/hubitat-misc/blob/main/src/apps/enabled-virtual-switch/README.md' target='_doc'>documentation</a> " +
             "for additional details."
+    }
 
+    section("<h3>Note</h3>") {
+        paragraph "All devices must be created before creating Virtual Switch Enabler."
+    }
+
+    section("") {
+        input "controlSwitch", "capability.switch",
+            title: "When this switch is turned on or off",
+            multiple: false,
+            required: true
         input "targetSwitch", "capability.switch",
             title: "Then turn this switch on or off",
             multiple: false,
@@ -53,23 +60,13 @@ preferences {
     }
 }
 
-def logDebugOff() {
-    
-}
-
 def logDebug(msg) {
     if (debugLogging) {
         log.debug(msg)
     }
 }
 
-def logWarn(msg) {
-    log.warn(msg)
-}
-
-def logInfo(msg) {
-    log.info(msg)
-}
+def logWarn(msg) {}
 
 def installed() {
     log.info "Installed..."
