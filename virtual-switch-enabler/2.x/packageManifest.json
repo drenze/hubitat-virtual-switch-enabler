@@ -6,7 +6,7 @@
   "minimumHEVersion": "0.0",
   "dateReleased": "2021-11-03",
   "documentationLink": "https://github.com/drenze/hubitat-virtual-switch-enabler/tree/main/virtual-switch-enabler/2.x",
-  "licenseFile": "https://github.com/drenze/hubitat-virtual-switch-enabler/blob/main/LICENSE",
+  "licenseFile": "https://raw.githubusercontent.com/drenze/hubitat-virtual-switch-enabler/main/LICENSE",
   "apps": [
     {
       "id": "6cc06f9a-6835-4bba-bce6-e070f5d6cfbe",
