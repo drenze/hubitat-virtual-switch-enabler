@@ -1,8 +1,8 @@
 {
   "packageName": "Virtual Switch Enabler",
   "author": "Doug Renze",
-  "version": "2.0.0",
-  "releaseNotes": "BREAKING CHANGE: Add multi-switch selection capability for target switches",
+  "version": "2.0.1",
+  "releaseNotes": "BREAKING CHANGE: Upgrade to 2.0.1. Add multi-switch selection capability for target switches. Remove all previous versions before installing.",
   "minimumHEVersion": "0.0",
   "dateReleased": "2021-11-03",
   "documentationLink": "https://github.com/drenze/hubitat-misc/blob/main/src/apps/virtual-switch-enabler/README.md",
