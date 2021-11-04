@@ -2,6 +2,8 @@
 
 Turn a switch on/off only when enabled.
 
+> **Note:** This is an upgrade to v2.x. Remove v1.x before installing.
+
 ## Description
 
 Virtual Switch Enabler (VSE) is a small application, which allows a device, group, or scene to be controlled, and enabled/disabled by a second switch. VSE was written to facilitate enabling/disabling holiday groups and scenes during the appropriate seasons, to avoid the need to seasonally delete and recreate rules.
@@ -28,7 +30,8 @@ To create an VSE instance:
 
 ## Changelog
 
-
+* v2.0.2 (2021-11-03) - Update documentation.
+* v2.0.0 (2021-11-03) - Add multi-switch control capability. Breaking change, remove v1.x before installing.
 ## Credits
 
 VSE is my first application written for Hubitat and wouldn't have been written without being able to use the applications in [Robert Morris'](https://github.com/RMoRobert/Hubitat) repository as an example, especially TimedSwitchHelper.
