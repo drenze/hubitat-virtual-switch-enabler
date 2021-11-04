@@ -1,7 +1,7 @@
 {
   "packageName": "Virtual Switch Enabler",
   "author": "Doug Renze",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "releaseNotes": "BREAKING CHANGE: Upgrade to 2.x. Add multi-switch selection capability for target switches. Remove v1.x before installing.",
   "minimumHEVersion": "0.0",
   "dateReleased": "2021-11-03",
