@@ -1,7 +1,5 @@
 # Virtual Switch Enabler
 
-## Summary
-
 Turn a switch on/off only when enabled.
 
 ## Description
@@ -27,6 +25,8 @@ To create an VSE instance:
      * If VSE hasn't been installed, install through **Hubitat Package Manager** or directly from source.
      * If VSE hasn't already been added, click "Add App," then add, otherwise select the VSE parent app.
      * Select switches, as prompted.
+
+## Changelog
 
 
 ## Credits
