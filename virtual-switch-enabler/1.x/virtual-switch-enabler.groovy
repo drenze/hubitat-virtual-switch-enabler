@@ -15,7 +15,7 @@
  */
 
 definition(
-    name: "Virtual Switch Enabler (Deprecated)",
+    name: "Virtual Switch Enabler 1.x (Deprecated)",
     namespace: "net.devizo.vse",
     author: "Douglas J. Renze",
     singleInstance: true,

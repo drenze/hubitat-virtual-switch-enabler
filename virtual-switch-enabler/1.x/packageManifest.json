@@ -1,5 +1,5 @@
 {
-  "packageName": "Virtual Switch Enabler (Deprecated)",
+  "packageName": "Virtual Switch Enabler 1.x (Deprecated)",
   "author": "Doug Renze",
   "version": "1.2.0",
   "releaseNotes": "Deprecate v1.x prior to 2.x release",
@@ -10,7 +10,7 @@
   "apps": [
     {
       "id": "ac2fa374-94f6-445a-bf18-6658cab04ed0",
-      "name": "Virtual Switch Enabler (Deprecated)",
+      "name": "Virtual Switch Enabler 1.x (Deprecated)",
       "namespace": "net.devizo.vse",
       "location": "https://raw.githubusercontent.com/drenze/hubitat-virtual-switch-enabler/main/virtual-switch-enabler/1.x/virtual-switch-enabler.groovy",
       "required": true,
